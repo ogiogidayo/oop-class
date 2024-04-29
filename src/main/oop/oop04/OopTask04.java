@@ -16,7 +16,7 @@ class Student {
     }
 }
 
-class KStudent extends Student {
+class KStudent extends Student implements Singable {
     int kid;
 
     public KStudent(int id, String name, int kid) {
@@ -28,6 +28,12 @@ class KStudent extends Student {
     public void print() {
         System.out.println(this.id + "," + this.kid + "," + this.name);
     }
+
+    @Override
+    public void sing(){
+        System.out.println("Lalala");
+    }
+
 }
 
 interface Singable
