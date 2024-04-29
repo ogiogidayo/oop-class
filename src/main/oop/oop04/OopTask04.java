@@ -1,6 +1,20 @@
 package oop04;
 
 public class OopTask04 {
+    public static void main(String[] args) {
+        Singable[] singers = new Singable[10];
+        for (int i=0; i<10; i++){
+            if (i % 2 == 0){
+                singers[i] = new KStudent(i, "Ken", i*10);
+            } else {
+                singers[i] = new Singer();
+            }
+        }
+        for (Singable s : singers){
+            s.sing();
+        }
+
+    }
 }
 
 class Student {
@@ -11,9 +25,6 @@ class Student {
         this.id=id;
         this.name=name;
     }
-    public void print(){
-        System.out.println(this.id + "," + this.name);
-    }
 }
 
 class KStudent extends Student implements Singable {
@@ -22,11 +33,6 @@ class KStudent extends Student implements Singable {
     public KStudent(int id, String name, int kid) {
         super(id, name);
         this.kid=kid;
-    }
-
-    @Override
-    public void print() {
-        System.out.println(this.id + "," + this.kid + "," + this.name);
     }
 
     @Override
