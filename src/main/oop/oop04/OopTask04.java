@@ -36,6 +36,13 @@ class KStudent extends Student implements Singable {
 
 }
 
+class Singer implements Singable{
+    @Override
+    public void sing() {
+        System.out.println("Rururu");
+    }
+}
+
 interface Singable
 {
     public void sing();
