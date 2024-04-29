@@ -13,7 +13,13 @@ public class OopTask04 {
         for (Singable s : singers){
             s.sing();
         }
-
+        int count = 0;
+        for (Singable s : singers){
+            if(s instanceof KStudent){
+                count++;
+            }
+        }
+        System.out.println("Count: " + count);
     }
 }
 
