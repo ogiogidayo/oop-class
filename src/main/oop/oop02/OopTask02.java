@@ -1,4 +1,4 @@
-package oop2;
+package oop02;
 
 public class OopTask02{
     public static void main(String[] args){

@@ -1,4 +1,4 @@
-package oop3;
+package oop03;
 
 public class OopTask03 {
     public static void main(String[] args) {
